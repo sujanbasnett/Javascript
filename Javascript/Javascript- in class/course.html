@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form onsubmit="handleSubmit(event)">
+        <input type="text" id="course" >
+        <input type="checkbox">
+    <button>Press Me</button></form>
+    <ul>
+        <li>HTML</li>
+        <li>CCSS</li>
+        <li>JS</li>
+    </ul>
+    </div>
+
+    <script>
+        function handleSubmit(event)
+        {
+            event.preventDefault();
+            inputValue= document.getElementById("course").value
+
+
+        }
+    </script>
+    
+</body>
+</html>

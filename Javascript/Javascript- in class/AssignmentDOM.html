@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background: #828082;
+        padding: 0 24px;
+        margin: 20px;
+        height: 100vh;
+        color: white;
+        text-align: center;
+      }
+      ul {
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form onsubmit="handleSubmit(event)">
+      <input id="inCourse" type="text" required placeholder="Course Name" />
+      <input id="detail" type="text" required placeholder="Course Available or Not">
+      <!-- <input type="radio" id="Available" name="courseAvailable" required />
+      <label for="Available">Available</label>
+      <input type="radio" id="Not Available" name="courseAvailable" required />
+      <label for="Not Available">Not Available</label> -->
+      <button>Submit</button>
+    </form>
+    <h2>Course Details</h2>
+    <ul id="allCourses"></ul>
+    
+    <script>
+      let courses=[];
+
+      courses=localStorage.getItem("courses")||[];;
+      function handleSubmit() {
+        event.preventDefault(event);
+        let inputCourse=document.getElementById("inCourse").value;
+        let inputCourseDetail=document.getElementById("detail").value;
+        courses.push({(inputCourse} ${inputCourseDetail}`});
+        console.log(courses)
+        convertToLi();
+        
+      }
+
+      function convertToLi() {
+        let outputOfCourses = "";
+        let outputOfCoursesDetails = "";
+        let output="";
+        // courses.forEach((course) => {
+        //   output = output + `<li>${course}-{</li>`;
+        // })
+        for (let i=0;i<courses.length;i++)
+        {
+            output=output+`<li>${courses[i]}-${coursesDetail[i]}</li>`
+        }
+        localStorage.setItem("courses",JSON.stringify(output))
+
+        document.getElementById("allCourses").innerHTML = output;
+        let inCourse = document.getElementById("inCourse").value;
+      }
+    </script>
+  </body>
+</html>

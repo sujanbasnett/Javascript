@@ -1,0 +1,5 @@
+- heading h1
+- <p> </p>
+- <a href="" target ="blank"> xxx </a>==>    <a href = "./" target="blank">current directory</a>, <a href="../"> parent of the current directory</a>
+- <link rel href>
+- <script src=""> </script>
